@@ -1,0 +1,58 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.tojava.gateway"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "gateway",
+    "baseName": "vueGatewayv4",
+    "packageName": "com.tojava.gateway",
+    "packageFolder": "com/tojava/gateway",
+    "serverPort": "8089",
+    "authenticationType": "jwt",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NWYwZTBiNjY5OGIyNWRlMmM1MDZmNmE3NDczNzU0Y2Y3NjhjYTYyZTBhYzQ5N2JjOTc5ZmRjMjUyZWM4ZGMyNDc1ZmYwNWM1MDkyM2RkZWJlZGYwNWQyN2ZhNmRiY2EwZjcyYjYwOGU0YzZmMTgzODE0Mzk1NmQwOTk5YjhkMWE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "vue",
+    "clientTheme": "materia",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1598247389480,
+    "testFrameworks": ["cucumber"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.9.1"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.9.1"
+      }
+    ],
+    "appsFolders": ["MenOnDemand-v3"],
+    "directoryPath": "../",
+    "monitoring": "prometheus",
+    "dockerRepositoryName": "hub.docker.com",
+    "dockerPushCommand": "docker push",
+    "openshiftNamespace": "jhipsterv3",
+    "storageType": "persistent",
+    "registryReplicas": 2,
+    "cacheProvider": "no"
+  }
+}
