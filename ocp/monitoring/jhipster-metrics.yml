@@ -245,7 +245,7 @@ objects:
       to:
         kind: Service
         name: ${PT_APP_NAME}
-        weight: '100'
+        weight: 100
       port:
         targetPort: 'tcp'
       wildcardPolicy: None
@@ -322,7 +322,7 @@ objects:
       to:
         kind: Service
         name: ${AM_APP_NAME}
-        weight: '100'
+        weight: 100
       port:
         targetPort: 'tcp'
       wildcardPolicy: None
@@ -400,7 +400,7 @@ objects:
       to:
         kind: Service
         name: ${GF_APP_NAME}
-        weight: '100'
+        weight: 100
       port:
         targetPort: 'http'
       wildcardPolicy: None
