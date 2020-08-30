@@ -14,7 +14,19 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124002_added_entity_Mentor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124102_added_entity_MentorSkill.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124202_added_entity_MyCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124302_added_entity_Training.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124402_added_entity_TrainingRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124502_added_entity_PaymentRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124602_added_entity_Technology.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20200830124002_added_entity_constraints_Mentor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124102_added_entity_constraints_MentorSkill.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124202_added_entity_constraints_MyCalendar.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124402_added_entity_constraints_TrainingRecord.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200830124502_added_entity_constraints_PaymentRecord.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

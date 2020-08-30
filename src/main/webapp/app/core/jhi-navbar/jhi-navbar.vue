@@ -32,6 +32,34 @@
                         <font-awesome-icon icon="th-list" />
                         <span>Entities</span>
                     </span>
+                    <b-dropdown-item to="/mentor">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Mentor</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/mentor-skill">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >MentorSkill</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/my-calendar">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >MyCalendar</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/training">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Training</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/training-record">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >TrainingRecord</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/payment-record">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >PaymentRecord</span>
+                    </b-dropdown-item>
+                    <b-dropdown-item to="/technology">
+                        <font-awesome-icon icon="asterisk" />
+                        <span >Technology</span>
+                    </b-dropdown-item>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </b-nav-item-dropdown>
                 <b-nav-item-dropdown

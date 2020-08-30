@@ -1,0 +1,32 @@
+{
+  "name": "Technology",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "toc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "preprequisites",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200830124602",
+  "entityTableName": "technology",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

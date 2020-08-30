@@ -45,12 +45,12 @@
         "version": "1.9.1"
       }
     ],
-    "appsFolders": ["MenOnDemand-v3"],
+    "appsFolders": ["MenOnDemand-v4"],
     "directoryPath": "../",
     "monitoring": "prometheus",
-    "dockerRepositoryName": "hub.docker.com",
+    "dockerRepositoryName": "docker.io",
     "dockerPushCommand": "docker push",
-    "openshiftNamespace": "jhipsterv3",
+    "openshiftNamespace": "jhipsterv4",
     "storageType": "persistent",
     "registryReplicas": 2,
     "cacheProvider": "no"

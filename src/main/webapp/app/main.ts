@@ -30,6 +30,13 @@ import GatewayService from '@/admin/gateway/gateway.service';
 
 /* tslint:disable */
 
+import MentorService from '@/entities/mentor/mentor.service';
+import MentorSkillService from '@/entities/mentor-skill/mentor-skill.service';
+import MyCalendarService from '@/entities/my-calendar/my-calendar.service';
+import TrainingService from '@/entities/training/training.service';
+import TrainingRecordService from '@/entities/training-record/training-record.service';
+import PaymentRecordService from '@/entities/payment-record/payment-record.service';
+import TechnologyService from '@/entities/technology/technology.service';
 // jhipster-needle-add-entity-service-to-main-import - JHipster will import entities services here
 
 /* tslint:enable */
@@ -91,6 +98,13 @@ new Vue({
     logsService: () => new LogsService(),
     metricsService: () => new MetricsService(),
     alertService: () => alertService,
+    mentorService: () => new MentorService(),
+    mentorSkillService: () => new MentorSkillService(),
+    myCalendarService: () => new MyCalendarService(),
+    trainingService: () => new TrainingService(),
+    trainingRecordService: () => new TrainingRecordService(),
+    paymentRecordService: () => new PaymentRecordService(),
+    technologyService: () => new TechnologyService(),
     // jhipster-needle-add-entity-service-to-main - JHipster will import entities services here
     accountService: () => accountService,
   },
