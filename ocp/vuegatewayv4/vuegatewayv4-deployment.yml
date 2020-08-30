@@ -82,7 +82,7 @@ objects:
         spec:
           containers:
             - name: ${APPLICATION_NAME}
-              image: docker.io/vuegatewayv4
+              image: docker.io/robin9999/vuegatewayv4
               imagePullPolicy: IfNotPresent
               env:
                 - name: SPRING_PROFILES_ACTIVE

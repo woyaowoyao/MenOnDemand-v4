@@ -11,8 +11,10 @@ sudo -i
 mvn -Pprod verify jib:dockerBuild -DskipTests
 #mvn -Pprod verify jib:dockerBuild
 sudo docker login 
-docker image tag vuegatewayv3 robin9999/vuegatewayv3
-docker push docker.io/robin9999/vuegatewayv3
+docker image tag vuegatewayv4 docker.io/robin9999/vuegatewayv4
+docker push docker.io/robin9999/vuegatewayv4
+
+docker image tag vuegatewayv4 robin9999/vuegatewayv4
 
 cd ocp  
 sh ocp-apply.sh
