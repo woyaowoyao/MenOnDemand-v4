@@ -18,6 +18,10 @@ docker image tag vuegatewayv4 robin9999/vuegatewayv4
 
 cd ocp  
 sh ocp-apply.sh
+
+oc get pods
+oc logs pod/vuegatewayv4-1-9bgdw
+
 ? Which *type* of application would you like to deploy? Microservice application
 ? Enter the root directory where your gateway(s) and microservices are located ../
 1 applications found at C:\java\2020\
