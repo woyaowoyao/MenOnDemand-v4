@@ -1,12 +1,13 @@
 jhipster 产生ocp openshift 文件
 
-(增加docker.io库by updating /etc/sysconfig/docker):  --add-registry docker.io  
+(增加docker.io库by updating /etc/sysconfig/docker):   vi /etc/sysconfig/docker
 #增加一行
 ADD_REGISTRY='--add-registry docker.io'
 #增加一行end
  sudo systemctl restart docker
  
 sudo -i
+cd /home/laidongs-cn.ibm.com/github/MenOnDemand-v4
 
 mvn -Pprod verify jib:dockerBuild -DskipTests
 #mvn -Pprod verify jib:dockerBuild
