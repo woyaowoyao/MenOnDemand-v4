@@ -17,6 +17,7 @@ docker push docker.io/robin9999/vuegatewayv4
 
 docker image tag vuegatewayv4 robin9999/vuegatewayv4
 
+oc new-project jhipsterv4
 cd ocp  
 sh ocp-apply.sh
 
