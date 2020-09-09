@@ -1,0 +1,91 @@
+kind: StatefulSet
+apiVersion: apps/v1
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"labels":{"app":"jhipster-registry","createdBy":"JHipster-Team"},"name":"jhipster-registry","namespace":"jhipster"},"spec":{"replicas":2,"selector":{"matchLabels":{"app":"jhipster-registry"}},"serviceName":"jhipster-registry","template":{"metadata":{"labels":{"app":"jhipster-registry"}},"spec":{"containers":[{"env":[{"name":"SPRING_PROFILES_ACTIVE","value":"prod,k8s"},{"name":"SPRING_SECURITY_USER_PASSWORD","valueFrom":{"secretKeyRef":{"key":"registry-admin-password","name":"reg-secret-ref"}}},{"name":"JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET","value":"YlhrdGMyVmpjbVYwTFhSdmEyVnVMWFJ2TFdOb1lXNW5aUzFwYmkxd2NtOWtkV04wYVc5dUxXRnVaQzEwYnkxclpXVndMV2x1TFdFdGMyVmpkWEpsTFhCc1lXTmwK"},{"name":"SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE","value":"native"},{"name":"SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS","value":"file:./central-config"},{"name":"EUREKA_INSTANCE_LEASE_RENEWAL_INTERVAL_IN_SECONDS","value":"15"},{"name":"EUREKA_INSTANCE_LEASE_EXPIRATION_DURATION_IN_SECONDS","value":"30"},{"name":"EUREKA_SERVER_PEER_EUREKA_NODES_UPDATE_INTERVAL_MS","value":"15000"},{"name":"EUREKA_SERVER_RENAWAL_THRESHOLD_UPDATE_INTERVAL_MS","value":"15000"},{"name":"EUREKA_SERVER_REGISTRY_SYNC_RETRIES","value":"3"},{"name":"EUREKA_SERVER_ENABLE_SELF_PRESERVATION","value":"false"},{"name":"EUREKA_SERVER_PEER_NODE_CONNECT_TIMEOUT_MS","value":"2000"},{"name":"EUREKA_CLIENT_FETCH_REGISTRY","value":"true"},{"name":"EUREKA_CLIENT_REGISTER_WITH_EUREKA","value":"true"},{"name":"K8S_CONFIG_PATH","value":"/central-config/"}],"image":"jhipster/jhipster-registry:v6.1.2","name":"jhipster-registry","ports":[{"containerPort":8761,"name":"http"}],"volumeMounts":[{"mountPath":"/central-config","name":"config-volume"}]}],"terminationGracePeriodSeconds":10,"volumes":[{"configMap":{"name":"application-config"},"name":"config-volume"}]}}}}
+  selfLink: /apis/apps/v1/namespaces/jhipster/statefulsets/jhipster-registry
+  name: jhipster-registry
+  generation: 1
+  namespace: jhipsterv4
+  labels:
+    app: jhipster-registry
+    createdBy: JHipster-Team
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jhipster-registry
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: jhipster-registry
+    spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: application-config
+            defaultMode: 420
+      containers:
+        - resources: {}
+          terminationMessagePath: /dev/termination-log
+          name: jhipster-registry
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: 'prod,k8s'
+            - name: SPRING_SECURITY_USER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: reg-secret-ref
+                  key: registry-admin-password
+            - name: JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET
+              value: >-
+                YlhrdGMyVmpjbVYwTFhSdmEyVnVMWFJ2TFdOb1lXNW5aUzFwYmkxd2NtOWtkV04wYVc5dUxXRnVaQzEwYnkxclpXVndMV2x1TFdFdGMyVmpkWEpsTFhCc1lXTmwK
+            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_TYPE
+              value: native
+            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS
+              value: 'file:./central-config'
+            - name: EUREKA_INSTANCE_LEASE_RENEWAL_INTERVAL_IN_SECONDS
+              value: '15'
+            - name: EUREKA_INSTANCE_LEASE_EXPIRATION_DURATION_IN_SECONDS
+              value: '30'
+            - name: EUREKA_SERVER_PEER_EUREKA_NODES_UPDATE_INTERVAL_MS
+              value: '15000'
+            - name: EUREKA_SERVER_RENAWAL_THRESHOLD_UPDATE_INTERVAL_MS
+              value: '15000'
+            - name: EUREKA_SERVER_REGISTRY_SYNC_RETRIES
+              value: '3'
+            - name: EUREKA_SERVER_ENABLE_SELF_PRESERVATION
+              value: 'false'
+            - name: EUREKA_SERVER_PEER_NODE_CONNECT_TIMEOUT_MS
+              value: '2000'
+            - name: EUREKA_CLIENT_FETCH_REGISTRY
+              value: 'true'
+            - name: EUREKA_CLIENT_REGISTER_WITH_EUREKA
+              value: 'true'
+            - name: K8S_CONFIG_PATH
+              value: /central-config/
+          ports:
+            - name: http
+              containerPort: 8761
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - name: config-volume
+              mountPath: /central-config
+          terminationMessagePolicy: File
+          image: 'jhipster/jhipster-registry:v6.1.2'
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 10
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  serviceName: jhipster-registry
+  podManagementPolicy: OrderedReady
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      partition: 0
+  revisionHistoryLimit: 10
+
