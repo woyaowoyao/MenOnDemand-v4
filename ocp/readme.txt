@@ -21,6 +21,8 @@ oc new-project jhipsterv4
 cd ocp  
 sh ocp-apply.sh
 
+ oc apply -f registry/from-jhipster-operator.yml #使用badboy operator yaml 创建Registry Eureka
+
 oc get pods
 oc logs pod/vuegatewayv4-1-9bgdw
 
